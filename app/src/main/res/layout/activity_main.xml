@@ -12,7 +12,8 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
 
         <Spinner
             android:id="@+id/stateSpinner"
@@ -22,7 +23,8 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
 
         <Spinner
             android:id="@+id/languageSpinner"
@@ -32,7 +34,8 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -46,6 +49,20 @@
                 android:layout_height="wrap_content"
                 android:hint="Enter PINCODE" />
         </android.support.design.widget.TextInputLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right">
+
+        <Button
+            android:id="@+id/nextButton"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:background="@drawable/rightround64dp"
+            android:layout_gravity="right"
+            android:elevation="6dp"/>
     </LinearLayout>
 
 

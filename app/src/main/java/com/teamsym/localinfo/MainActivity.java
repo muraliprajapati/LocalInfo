@@ -15,12 +15,13 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity implements Spinner.OnItemClickListener{
+public class MainActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener, View.OnClickListener {
 
     public static final String PREFRENCE_FILE_NAME = "user_pref";
     Spinner stateDropDownList;
     Spinner languageDropDownList;
     EditText pincodeEditText;
+    Button nextButton;
 
     SharedPreferences preferences;
     SharedPreferences.Editor editor;
@@ -36,11 +37,15 @@ public class MainActivity extends AppCompatActivity implements Spinner.OnItemCli
         stateDropDownList = (Spinner) findViewById(R.id.stateSpinner);
         languageDropDownList = (Spinner) findViewById(R.id.languageSpinner);
         pincodeEditText = (EditText)findViewById(R.id.pincodeEditText);
+        nextButton = (Button) findViewById(R.id.nextButton);
 
         ArrayAdapter<CharSequence> stateAdapter = ArrayAdapter.createFromResource(this,R.array.states,android.R.layout.simple_spinner_dropdown_item);
         ArrayAdapter<CharSequence> languageAdapter = ArrayAdapter.createFromResource(this,R.array.languages,android.R.layout.simple_spinner_dropdown_item);
         stateDropDownList.setAdapter(stateAdapter);
         languageDropDownList.setAdapter(languageAdapter);
+
+        stateDropDownList.setOnItemSelectedListener(this);
+        languageDropDownList.setOnItemSelectedListener(this);
 
 
 
@@ -48,20 +53,34 @@ public class MainActivity extends AppCompatActivity implements Spinner.OnItemCli
 
 
     @Override
-    public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
-        int id = view.
+    public void onItemSelected(AdapterView<?> adapterView, View view, int position, long l) {
+        int id = view.getId();
 
-        switch (id){
+        switch (adapterView.getId()){
             case R.id.stateSpinner:
                 String state = adapterView.getItemAtPosition(position).toString();
+                editor.putString(Keys.KEY_STATE,state);
+                editor.commit();
                 Toast.makeText(getApplicationContext(),state,Toast.LENGTH_SHORT).show();
                 break;
             case R.id.languageSpinner:
                 String language = adapterView.getItemAtPosition(position).toString();
+                editor.putString(Keys.KEY_LANGUAGE,language);
+                editor.commit();
                 Toast.makeText(getApplicationContext(),language,Toast.LENGTH_SHORT).show();
                 break;
             default:
-                Toast.makeText(getApplicationContext(),"Nothing",Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(),"Nothing in switch",Toast.LENGTH_SHORT).show();
         }
+    }
+
+    @Override
+    public void onNothingSelected(AdapterView<?> adapterView) {
+        Toast.makeText(getApplicationContext(),"Nothing",Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void onClick(View view) {
+
     }
 }
