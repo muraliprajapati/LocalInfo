@@ -1,3 +1,27 @@
 <resources>
     <string name="app_name">Local Info</string>
+
+    <array name="states">
+        <item>Gujarat</item>
+        <item>Rajasthan</item>
+        <item>Punjab</item>
+        <item>Maharastra</item>
+        <item>Kerla</item>
+        <item>Tamilnadu</item>
+        <item>Madhya Pradesh</item>
+        <item>Uttar Pradesh</item>
+        <item>Bihar</item>
+        <item>Asam</item>
+    </array>
+
+    <array name="languages">
+        <item>Hindi</item>
+        <item>Gujarati</item>
+        <item>Rajasthani</item>
+        <item>Punjabi</item>
+        <item>Marathi</item>
+        <item>Telugu</item>
+        <item>Tamil</item>
+
+    </array>
 </resources>
