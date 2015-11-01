@@ -6,7 +6,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="424dp">
 
         <ListView
             android:id="@+id/prefrencesListView"
@@ -17,7 +17,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="80dp"
         android:layout_gravity="bottom"
         android:gravity="right">
 
@@ -25,9 +25,10 @@
             android:id="@+id/nextButton"
             android:layout_width="64dp"
             android:layout_height="64dp"
-            android:layout_gravity="right"
             android:background="@drawable/rightround64dp"
-            android:elevation="6dp" />
+            android:elevation="6dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginRight="8dp" />
     </LinearLayout>
 
 </FrameLayout>

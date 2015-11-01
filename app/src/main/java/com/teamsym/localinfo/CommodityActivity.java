@@ -6,11 +6,11 @@ import android.support.v7.app.AppCompatActivity;
 /**
  * Created by Murali on 01/11/2015.
  */
-public class FeedPrefrences extends AppCompatActivity {
+public class CommodityActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_feed_prefrences);
+        setContentView(R);
     }
 }

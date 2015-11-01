@@ -24,4 +24,16 @@
         <item>Tamil</item>
 
     </array>
+
+    <array name="prefrence_name">
+        <item>Commodity price</item>
+        <item>Weather Information</item>
+        <item>Local News</item>
+        <item>Nearby Events</item>
+        <item>Jobs</item>
+        <item>Agriculture Tools</item>
+        <item>Dairy</item>
+        <item>Farming Tips</item>
+
+    </array>
 </resources>
